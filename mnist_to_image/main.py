@@ -14,5 +14,5 @@ x,y=loadDataset("../datasets/mnist/mnist_train.csv",100)
 
 digit = x[0]
 digit_pixels = digit.reshape(28, 28)
-plt.imshow(digit_pixels, cmap='gray')
+plt.imshow(digit_pixels)
 plt.show()
