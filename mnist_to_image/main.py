@@ -16,3 +16,4 @@ digit = x[0]
 digit_pixels = digit.reshape(28, 28)
 plt.imshow(digit_pixels)
 plt.show()
+
