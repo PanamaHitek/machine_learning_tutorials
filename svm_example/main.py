@@ -1,80 +1,69 @@
-import csv
+import pandas as pd
+import numpy as np
+import time as time
 from sklearn import svm
-import time
+
+trainingSamples = 50000  # Self explanatory
+testingSamples = 10000
+
+"""
+Here I set the global variables, which
+will be used to test the computing time
+for both training and testing
+"""
+
+startTrainingTime = 0
+endTrainingTime = 0
+trainingTime = 0
+
+startTestingTime = 0
+endTestingTime = 0
+testingTime = 0
+
+
+def loadDataset(fileName, samples):  # A function for loading the data from a dataset
+    x = []  # Array for data inputs
+    y = []  # Array for labels (expected outputs)
+    train_data = pd.read_csv(fileName)  # Data has to be stored in a CSV file, separated by commas
+    y = np.array(train_data.iloc[0:samples, 0])  # Labels column
+    x = np.array(train_data.iloc[0:samples, 1:]) / 255  # Division by 255 is used for data normalization
+    return x, y
+
 
 def main():
+    train_x, train_y = loadDataset("../datasets/mnist/mnist_train.csv", trainingSamples)  # Loading training data
+    test_x, test_y = loadDataset("../datasets/mnist/mnist_test.csv", testingSamples)  # Loading testing data
+    clf = svm.SVC()  # Classifier object
+    startTrainingTime = time.time()
+    clf.fit(train_x, train_y)  # Training of a model by fitting training data to object
+    endTrainingTime = time.time()
+    trainingTime = endTrainingTime - startTrainingTime  # Training time calculation
 
-    resultColumn  =0
-    minDataColumn = 1
-    maxDataColumn = 785
-    x=[]
-    y=[]
-    resultCount=0
-    validResults=0
-    trainingSize = 50000
-    testingSize = 10000
-    trainingCounter =0
-    testingCounter=0
-    startTime=0
-    endTime=0
+    validResults = 0
+    startTestingTime = time.time()
+    for i in range(len(test_y)):  # A for loop to evaluate result vs expected results
+        expectedResult = int(test_y[int(i)])  # Load expected result from testing dataset
+        result = int(
+            clf.predict(test_x[int(i)].reshape(1, len(test_x[int(i)]))))  # Calculate a result using trained model
+        outcome = "Fail"
+        if result == expectedResult:
+            validResults = validResults + 1  # Counting valid results
+            outcome = " OK "
+        print("Expected result: ", expectedResult, " | Obtained result: ", result, " | ", outcome, " | Accuracy: ",
+              round((validResults / (i + 1)) * 100, 2), "%")  # Printing the results for each label in testing dataset
 
-    clf = None
-    print("Training...")
-    with open('../datasets/mnist/mnist_train.csv') as csvfile :
-        reader = csv.reader(csvfile)
-        next(reader)
-        for row in reader:
-            temp = []
-            for i in range(minDataColumn,maxDataColumn):
-                num = int(row[i])/255
-                temp.append(num)
-            x.append(temp)
-            y.append(row[resultColumn])
-            if (trainingCounter >= trainingSize):
-                break
-            else:
-                trainingCounter = trainingCounter + 1
-        clf = svm.SVC()
-        startTime=time.time()
-        clf.fit(x, y)
-        endTime = time.time()
-    data = []
-    print("Testing...")
-    with open('../datasets/mnist/mnist_test.csv') as testfile:
-        reader = csv.reader(testfile)
-        next(reader)
-        for row in reader:
-            temp = []
-            res = []
-            for i in range(minDataColumn, maxDataColumn):
-                num = int(row[i]) / 255
-                temp.append(num)
-            expectedResult = row[resultColumn]
-            result = clf.predict([temp])
-            res.append(row[resultColumn])
-            res.append(result)
-            data.append(res)
-            resultCount=resultCount+1
-            outcome = "Fail"
-            if expectedResult==result:
-                validResults=validResults+1
-                outcome = "OK"
-            print("Test N: ",resultCount," | Expected result: ",expectedResult," | Obtained result: ",result, " | Outcome: ",outcome ," | Accuracy: ",(validResults/resultCount)*100,"%");
-            if (testingCounter >= testingSize-1):
-                break
-            else:
-                testingCounter = testingCounter + 1
+    endTestingTime = time.time()
+    testingTime = endTestingTime - startTestingTime  # Calculation of testing time
 
-    print("--------------------")
+    print("-------------------------------")
     print("Results")
-    print("--------------------")
-    print("Performed tests: ",resultCount)
-    print("Valid results: ", validResults)
-    print("Accuracy: ",(validResults/resultCount)*100,"%")
-    print("Training time: ", endTime-startTime)
+    print("-------------------------------")
+    print("Training samples: ", trainingSamples)
+    print("Training time: ", round(trainingTime, 2), " s")
+    print("Testing samples: ", testingSamples)
+    print("Testing time: ", round(testingTime, 2), " s")
+    print("Testing accuracy: ", round((validResults / testingSamples) * 100, 2), "%")
+
 
 if __name__ == "__main__":
     main()
-
-
-
