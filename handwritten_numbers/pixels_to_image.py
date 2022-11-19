@@ -13,8 +13,12 @@ def loadDataset(fileName, samples):
 
 
 x, y = loadDataset("../datasets/custom/custom_mnist.csv", 10)
+fig = plt.figure(figsize=(2, 5))
 
-digit = x[9]
-digit_pixels = digit.reshape(28, 28)
-plt.imshow(digit_pixels)
+for i in range(len(x)):
+    digit = x[i]
+    digit_pixels = digit.reshape(28, 28)
+    fig.add_subplot(2, 5, i + 1)
+    plt.axis('off')
+    plt.imshow(digit_pixels)
 plt.show()
