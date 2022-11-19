@@ -3,7 +3,7 @@ import numpy as np
 import time as time
 from sklearn import svm
 
-trainingSamples = 5000  # Self explanatory
+trainingSamples = 50000  # Self explanatory
 testingSamples = 10
 
 """
