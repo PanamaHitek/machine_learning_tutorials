@@ -17,7 +17,7 @@ x, y = loadDataset("../datasets/mnist/mnist_train.csv", 50000)
 fig = plt.figure(figsize=(10, 10))
 limit = 100
 limitIndex = 0
-labelToPrint = 7
+labelToPrint = 9
 
 for i in range(len(x)):
     digit = x[i]
