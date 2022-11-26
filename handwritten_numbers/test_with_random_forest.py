@@ -5,7 +5,7 @@ from sklearn import svm
 from sklearn.ensemble import RandomForestClassifier
 
 trainingSamples = 50000  # Self explanatory
-testingSamples = 10000
+testingSamples = 10
 
 """
 Here I set the global variables, which
@@ -25,7 +25,7 @@ testingTime = 0
 def loadDataset(fileName, samples):  # A function for loading the data from a dataset
     x = []  # Array for data inputs
     y = []  # Array for labels (expected outputs)
-    train_data = pd.read_csv(fileName)  # Data has to be stored in a CSV file, separated by commas
+    train_data = pd.read_csv(fileName, header=None)  # Data has to be stored in a CSV file, separated by commas
     y = np.array(train_data.iloc[0:samples, 0])  # Labels column
     x = np.array(train_data.iloc[0:samples, 1:]) / 255  # Division by 255 is used for data normalization
     return x, y
@@ -33,8 +33,8 @@ def loadDataset(fileName, samples):  # A function for loading the data from a da
 
 def main():
     train_x, train_y = loadDataset("../datasets/mnist/mnist_train.csv", trainingSamples)  # Loading training data
-    test_x, test_y = loadDataset("../datasets/mnist/mnist_test.csv", testingSamples)  # Loading testing data
-    clf = RandomForestClassifier(n_estimators=300)  # Classifier object
+    test_x, test_y = loadDataset("../datasets/custom/custom_mnist.csv", testingSamples)  # Loading testing data
+    clf = RandomForestClassifier()  # Classifier object
     startTrainingTime = time.time()
     clf.fit(train_x, train_y)  # Training of a model by fitting training data to object
     endTrainingTime = time.time()
@@ -44,8 +44,7 @@ def main():
     startTestingTime = time.time()
     for i in range(len(test_y)):  # A for loop to evaluate result vs expected results
         expectedResult = int(test_y[int(i)])  # Load expected result from testing dataset
-        result = int(
-            clf.predict(test_x[int(i)].reshape(1, len(test_x[int(i)]))))  # Calculate a result using trained model
+        result = int(clf.predict(test_x[int(i)].reshape(1, len(test_x[int(i)]))))  # Calculate a result
         outcome = "Fail"
         if result == expectedResult:
             validResults = validResults + 1  # Counting valid results

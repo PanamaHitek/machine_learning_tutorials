@@ -15,7 +15,7 @@ for pictures in os.scandir("images/resized_digits"):  # Read al images in this p
         for j in range(28):
             p = int(pixels[j, i])  # Load each pixel in the 2D array
             if (p > 50):  # Pixel cleaning condition
-                pixel_array.append(255)  # Append each pixel to the row array
+                pixel_array.append(p)  # Append each pixel to the row array
             else:
                 pixel_array.append(0)
     csv_array.append(pixel_array)  # Append each row array to the global array
