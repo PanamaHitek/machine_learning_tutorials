@@ -12,7 +12,7 @@ def loadDataset(fileName, samples):
     return x, y
 
 
-x, y = loadDataset("../datasets/mnist/mnist_train.csv", 50000)
+x, y = loadDataset("../../../../datasets/mnist/mnist_train.csv", 50000)
 
 fig = plt.figure(figsize=(10, 10))
 limit = 100

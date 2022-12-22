@@ -21,4 +21,4 @@ for pictures in os.scandir("images/resized_digits"):  # Read al images in this p
     csv_array.append(pixel_array)  # Append each row array to the global array
 
 csv_array = np.asarray(csv_array)  # Convert array to numpy array
-pd.DataFrame(csv_array).to_csv("../datasets/custom/custom_mnist.csv", header=None)  # Save pixels in a file
+pd.DataFrame(csv_array).to_csv("../../../../datasets/custom/custom_mnist.csv", header=None)  # Save pixels in a file

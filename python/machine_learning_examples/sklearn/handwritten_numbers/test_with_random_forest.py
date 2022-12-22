@@ -21,7 +21,6 @@ startTestingTime = 0
 endTestingTime = 0
 testingTime = 0
 
-
 def loadDataset(fileName, samples):  # A function for loading the data from a dataset
     x = []  # Array for data inputs
     y = []  # Array for labels (expected outputs)
@@ -32,8 +31,8 @@ def loadDataset(fileName, samples):  # A function for loading the data from a da
 
 
 def main():
-    train_x, train_y = loadDataset("../datasets/mnist/mnist_train.csv", trainingSamples)  # Loading training data
-    test_x, test_y = loadDataset("../datasets/custom/custom_mnist.csv", testingSamples)  # Loading testing data
+    train_x, train_y = loadDataset("../../../../datasets/mnist/mnist_train.csv", trainingSamples)  # Loading training data
+    test_x, test_y = loadDataset("../../../../datasets/mnist/mnist_test.csv", testingSamples)  # Loading testing data
     clf = RandomForestClassifier()  # Classifier object
     startTrainingTime = time.time()
     clf.fit(train_x, train_y)  # Training of a model by fitting training data to object

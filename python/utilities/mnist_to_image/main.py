@@ -12,7 +12,7 @@ def loadDataset(fileName, samples):
     return x, y
 
 
-x, y = loadDataset("../datasets/mnist/mnist_test.csv", 10000)
+x, y = loadDataset("../../../datasets/mnist/mnist_test.csv", 10000)
 
 digit = x[1327]
 digit_pixels = digit.reshape(28, 28)
