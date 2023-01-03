@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import time as time
-from sklearn import svm
 from sklearn.ensemble import RandomForestClassifier
 
 trainingSamples = 50000  # Self explanatory
@@ -33,7 +32,7 @@ def loadDataset(fileName, samples):  # A function for loading the data from a da
 def main():
     train_x, train_y = loadDataset("../../../../datasets/mnist/mnist_train.csv", trainingSamples)  # Loading training data
     test_x, test_y = loadDataset("../../../../datasets/mnist/mnist_test.csv", testingSamples)  # Loading testing data
-    clf = RandomForestClassifier(n_estimators=300)  # Classifier object
+    clf = RandomForestClassifier(n_estimators=500, max_depth=30,min_samples_split=2)  # Classifier object
     startTrainingTime = time.time()
     clf.fit(train_x, train_y)  # Training of a model by fitting training data to object
     endTrainingTime = time.time()
