@@ -1,4 +1,4 @@
-from sklearn.ensemble import AdaBoostClassifier, BaggingClassifier, GradientBoostingClassifier, RandomForestClassifier, VotingClassifier
+from sklearn.ensemble import AdaBoostClassifier, BaggingClassifier, GradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression, Perceptron, RidgeClassifier, SGDClassifier
 from sklearn.naive_bayes import BernoulliNB, ComplementNB, GaussianNB, MultinomialNB
 from sklearn.neighbors import KNeighborsClassifier, NearestCentroid, RadiusNeighborsClassifier
@@ -29,7 +29,7 @@ classifiers = [
     ComplementNB(),
     DecisionTreeClassifier(),
     ExtraTreeClassifier(),
-   GradientBoostingClassifier(),
+    GradientBoostingClassifier(),
     KNeighborsClassifier(),
     MultinomialNB(),
     NearestCentroid(),
@@ -56,4 +56,5 @@ for clf in classifiers:
 
 # Find the classifier with the highest accuracy
 best_classifier = max(accuracies, key=accuracies.get)
+print("-----------------------------------")
 print(f"Best classifier: {best_classifier}")

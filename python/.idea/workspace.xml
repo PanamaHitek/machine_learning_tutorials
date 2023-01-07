@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a93cfb17-a0c1-4b23-96d6-1350afde306c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_hyperparameter_search/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/kneighbor_example/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/kneighbor_example/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_search/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_classifier_search/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_classifier_search/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_classifier_search/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\sklearn" />
+      <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples" />
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\compressive_sensing" />
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\xgboost" />
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\tensorflow\random_forest_example" />
@@ -95,27 +97,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/compressive_sensing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compressive_sensing/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main (4)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,6 +110,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_search/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_classifier_search" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_classifier_search/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.main (4)" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.main_2" />
-        <item itemvalue="Python.main (3)" />
       </list>
     </recent_temporary>
   </component>
