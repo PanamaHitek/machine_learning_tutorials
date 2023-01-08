@@ -18,9 +18,9 @@ def loadDataset(fileName, samples):  # A function for loading the data from a da
 
 # Define the grid of hyperparameter values to search over
 param_grid = {
-    'n_neighbors': [3, 5, 7, 9, 11],
-    'weights': ['uniform', 'distance'],
-    'leaf_size': [5, 10, 20, 30, 35, 40, 45, 50]
+    'n_neighbors': [3],
+    'weights': ['distance'],
+    'leaf_size': [1,2,3]
 }
 
 # Define the scoring metric to use for evaluation

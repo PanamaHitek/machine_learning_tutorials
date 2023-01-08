@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a93cfb17-a0c1-4b23-96d6-1350afde306c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/kneighbor_example/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/kneighbor_example/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_knn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_classifier_search/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/grid_classifier_search/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_random_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_random_forest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_svm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/machine_learning_examples/sklearn/kneighbor_example/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/kneighbor_example/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +38,20 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Antony Garcia/Desktop/machine_learning_tutorials/python/machine_learning_examples/sklearn",
+    "last_opened_file_path": "C:/Users/Antony Garcia/Desktop/machine_learning_tutorials/python/machine_learning_examples/sklearn/handwritten_numbers/images",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\sklearn\handwritten_numbers\images" />
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\sklearn" />
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples" />
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\compressive_sensing" />
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\xgboost" />
-      <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\tensorflow\random_forest_example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\sklearn\handwritten_numbers" />
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\compressive_sensing" />
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\tensorflow\random_forest_example" />
     </key>
