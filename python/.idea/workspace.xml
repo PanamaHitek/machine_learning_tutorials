@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a93cfb17-a0c1-4b23-96d6-1350afde306c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_knn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/MachineLearning_Examples/src/main/java/com/panamahitek/probability/wighted_probability.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/MachineLearning_Examples/src/main/java/com/panamahitek/probability/wighted_probability.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_random_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_random_forest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/handwritten_numbers/test_with_svm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning_examples/sklearn/kneighbor_example/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning_examples/sklearn/kneighbor_example/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +31,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Antony Garcia/Desktop/machine_learning_tutorials/python/machine_learning_examples/sklearn/handwritten_numbers/images",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Antony Garcia/Desktop/wpi/kagutsuchi&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\sklearn\handwritten_numbers\images" />
@@ -56,7 +53,7 @@
       <recent name="C:\Users\Antony Garcia\Desktop\machine_learning_tutorials\python\machine_learning_examples\tensorflow\random_forest_example" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />

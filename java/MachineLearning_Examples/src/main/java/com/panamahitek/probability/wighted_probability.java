@@ -89,9 +89,8 @@ public class wighted_probability {
                 sum += l.getProbability();
                 cumulativeProbabilities.add(sum);
             }
-
             //Generate a random number between 0 and 1
-            double r = Math.random();
+            double r = Math.random() * sum;
             //Select a letter based on the cumulative probabilities
             String selectedLetter = letters.stream()
                     //Find the first letter whose cumulative probability is greater than the random number
