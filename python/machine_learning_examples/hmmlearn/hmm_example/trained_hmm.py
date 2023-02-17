@@ -17,7 +17,7 @@ observations = df["Value"].values.reshape(-1, 1)
 hidden_states = loaded_model.predict(observations)
 
 # Filter the hidden states
-filtered_hidden_states = np.full_like(hidden_states, -1)
+filtered_hidden_states = np.full_like(hidden_states, 0)
 current_state = hidden_states[0]
 cluster_length = 1
 for i in range(1, len(hidden_states)):
@@ -28,6 +28,10 @@ for i in range(1, len(hidden_states)):
             filtered_hidden_states[i-cluster_length:i] = 3
         current_state = hidden_states[i]
         cluster_length = 1
+
+for i in range(0, len(filtered_hidden_states)):
+    if (filtered_hidden_states[i]==0):
+        observations[i]=0
 
 # Print the filtered hidden states
 print("Filtered Hidden States:", filtered_hidden_states)

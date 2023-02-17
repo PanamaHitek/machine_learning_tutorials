@@ -8,7 +8,7 @@ testingSamples = 10000
 
 """
 Here I set the global variables, which
-will be used to test the computing time
+will be used to simple_neural_network the computing time
 for both training and testing
 """
 

@@ -7,7 +7,7 @@ trainingSamples = 50000  # Self explanatory
 
 """
 Here I set the global variables, which
-will be used to test the computing time
+will be used to simple_neural_network the computing time
 for both training and testing
 """
 def loadDataset(fileName, samples):  # A function for loading the data from a dataset
