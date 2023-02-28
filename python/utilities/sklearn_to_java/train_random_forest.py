@@ -39,4 +39,4 @@ with open('trained_model_random_forest.java', 'w') as f:
     f.write(code)
 
 # Print a confirmation message
-print('Logistic regression model code saved to trained_model_random_forest.java')
+print('Random Forest model code saved to trained_model_random_forest.java')

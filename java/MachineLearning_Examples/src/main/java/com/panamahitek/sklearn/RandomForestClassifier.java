@@ -1,4 +1,6 @@
-public class Model {
+package com.panamahitek.sklearn;
+
+public class RandomForestClassifier {
     public static double[] score(double[] input) {
         double[] var0;
         if (input[0] <= 4.5) {
