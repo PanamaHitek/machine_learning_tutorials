@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import m2cgen as m2c
 
@@ -19,7 +19,7 @@ dataset_x, dataset_y = loadDataset("../../../datasets/mammographic_mass/dataset.
 train_x, test_x, train_y, test_y = train_test_split(dataset_x, dataset_y, test_size=0.2, random_state=42)
 
 # Define the Logistic Regression model with the best hyperparameters
-model = LogisticRegression(C=0.1, max_iter=1000)
+model = RandomForestClassifier()
 
 # Train the model
 model.fit(train_x, train_y)
@@ -35,8 +35,8 @@ print('Test accuracy:', accuracy)
 code = m2c.export_to_java(model)
 
 # Save the logistic regression model code to a Java file
-with open('trained_model.java', 'w') as f:
+with open('trained_model_random_forest.java', 'w') as f:
     f.write(code)
 
 # Print a confirmation message
-print('Logistic regression model code saved to trained_model.java')
+print('Logistic regression model code saved to trained_model_random_forest.java')
