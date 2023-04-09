@@ -32,7 +32,7 @@ param_grid = {
 grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=5, verbose=2)
 grid_search.fit(train_x, train_y)
 
-# Make predictions on the test data using the best model found
+# Make predictions on the simple_neural_network data using the best model found
 best_model = grid_search.best_estimator_
 pred_y = best_model.predict(test_x)
 

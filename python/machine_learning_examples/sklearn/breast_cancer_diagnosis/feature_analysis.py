@@ -24,7 +24,7 @@ model = LogisticRegression(C=0.1, max_iter=1000)
 # Train the model
 model.fit(train_x, train_y)
 
-# Make predictions on the test data
+# Make predictions on the simple_neural_network data
 pred_y = model.predict(test_x)
 
 # Evaluate the model
