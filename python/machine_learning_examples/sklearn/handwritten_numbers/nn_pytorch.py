@@ -80,7 +80,7 @@ class SimpleNeuralNetwork(nn.Module):
 def main():
     # Load the training and testing datasets
     train_x, train_y = loadDataset("../../../../datasets/mnist/mnist_train.csv", trainingSamples)
-    test_x, test_y = loadDataset("../../../../datasets/mnist/mnist_test.csv", testingSamples)
+    test_x, test_y = loadDataset("../../../../datasets/custom/custom_mnist.csv", testingSamples)
 
     # Define the batch size for training and testing data
     batchSize = 64
@@ -91,9 +91,8 @@ def main():
     # Define a DataLoader object for the testing data
     test_loader = DataLoader(TensorDataset(test_x, test_y), batch_size=batchSize)
 
-    device = torch.device("cuda")  # remove to use GPU, is available
     # Create a SimpleNeuralNetwork object and define the loss function and optimizer
-    model = SimpleNeuralNetwork().to(device)
+    model = SimpleNeuralNetwork()
     loss_function = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters())
 
