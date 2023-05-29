@@ -48,9 +48,9 @@ def loadDataset(fileName, samples):
 
 
 # Define a simple neural network class
-class SimpleNeuralNetwork(nn.Module):
+class ConvolutionalNeuralNetwork(nn.Module):
     def __init__(self):
-        super(SimpleNeuralNetwork, self).__init__()
+        super(ConvolutionalNeuralNetwork, self).__init__()
 
         # Define a convolutional layer with 1 input channel, 32 output channels, and a kernel size of 3x3
         self.conv1 = nn.Conv2d(1, 32, kernel_size=3)
@@ -100,7 +100,7 @@ def main():
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")  # Use GPU if available, otherwise use CPU
     # Create a SimpleNeuralNetwork object and define the loss function and optimizer
-    model = SimpleNeuralNetwork().to(device)
+    model = ConvolutionalNeuralNetwork().to(device)
     loss_function = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters())
 
